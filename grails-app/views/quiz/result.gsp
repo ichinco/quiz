@@ -8,7 +8,9 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-  <head><title>Simple GSP page</title></head>
+  <head>
+      <meta name="layout" content="quiz" />
+  </head>
   <body>
     <g:each in="${results}" var="result">
         <div>${result.getResultName()}</div>
