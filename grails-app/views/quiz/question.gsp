@@ -6,13 +6,7 @@
   </head>
   <body>
     <div>${question.text}</div>
-    <g:form controller="quiz" action="${yesAction}">
-        <g:hiddenField name="id" value="${yesId}" />
-        <g:submitButton name="submit" value="${question.yesText}" />
-    </g:form>
-    <g:form controller="quiz" action="${noAction}" >
-        <g:hiddenField name="id" value="${noId}" />
-        <g:submitButton name="submit" value="${question.noText}"/>
-    </g:form>
+    <g:link controller="quiz" action="${yesAction}" params="['qid':yesId]">${question.yesText}</g:link><br/>
+    <g:link controller="quiz" action="${noAction}" params="['qid':noId]">${question.noText}</g:link>
   </body>
 </html>

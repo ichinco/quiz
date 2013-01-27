@@ -5,7 +5,7 @@ class QuizController {
     def index = { }
 
     def displayQuestion = {
-        int id = Integer.parseInt(params.id)
+        int id = Integer.parseInt(params.qid)
         Question question = Question.findById(id);
         Path yesPath = Path.findByQuestionAndChoice(question, 1);
         Path noPath = Path.findByQuestionAndChoice(question, 0);
@@ -21,7 +21,7 @@ class QuizController {
     }
 
     def displayResult = {
-        int id = Integer.parseInt(params.id)
+        int id = Integer.parseInt(params.qid)
         ResultSet set = ResultSet.findById(id);
         List<ResultSetResult> results = ResultSetResult.findAllByResultSet(set);
 
