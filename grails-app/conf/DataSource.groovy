@@ -1,8 +1,5 @@
 dataSource {
     pooled = true
-    driverClassName = "org.hsqldb.jdbcDriver"
-    username = "sa"
-    password = ""
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -21,6 +18,9 @@ environments {
     test {
         dataSource {
             dbCreate = "update"
+            driverClassName = "org.hsqldb.jdbcDriver"
+            username = "sa"
+            password = ""
             url = "jdbc:hsqldb:mem:testDb"
         }
     }
@@ -29,7 +29,7 @@ environments {
             dbCreate = "update"
 //            url = "jdbc:hsqldb:file:prodDb;shutdown=true"
             driverClassName = "org.postgresql.Driver"
-            url = "jdbc:postgresql://ec2-54-243-193-133.compute-1.amazonaws.com:5432/d50lkg9skmlkhe?user=sfodgkoxvjydhm&password=vJ9DpFVrYq1wIvShtjKY9uE02Z&ssl=true"
+            url = "jdbc:postgresql://ec2-54-243-193-133.compute-1.amazonaws.com:5432/d50lkg9skmlkhe?user=sfodgkoxvjydhm&password=vJ9DpFVrYq1wIvShtjKY9uE02Z&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
         }
     }
 }
