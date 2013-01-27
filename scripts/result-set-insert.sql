@@ -53,11 +53,16 @@ insert into result_set_result (id, version, result_set_id, result_id) VALUES
 (27,0,15,17), -- parrot
 (28,0,15,22), -- cockatiel
 (29,0,16,11), -- snake
-(30,0,16,3), -- turtle
-(31,0,17,13), -- lizard
-(32,0,17,23), -- pig
-(33,0,17,11), -- snake
-(34,0,18,4), -- fish
-(35,0,18,18), -- betafish
-(36,0,18,19), -- goldfish
-(37,0,18,21) -- hermit
+(30,0,17,3), -- turtle
+(31,0,18,13), -- lizard
+(32,0,18,23), -- pig
+(33,0,18,11), -- snake
+(34,0,19,3), -- turtle
+(35,0,19,12), -- chameleon
+(36,0,19,15), -- gecko
+(37,0,20,4), -- fish
+(38,0,20,18), -- betafish
+(39,0,20,19), -- goldfish
+(40,0,20,21) -- hermit
+
+
