@@ -13,8 +13,9 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop','update'
-            url = "jdbc:hsqldb:mem:devDB"
+            dbCreate = "update" // one of 'create', 'create-drop','update'
+            url = "jdbc:postgresql://localhost:5432/quiz?user=postgres&password=dev"
+            driverClassName = "org.postgresql.Driver"
         }
     }
     test {
@@ -27,6 +28,7 @@ environments {
         dataSource {
             dbCreate = "update"
             url = "jdbc:hsqldb:file:prodDb;shutdown=true"
+            // url = "jdbc:postgresql://ec2-54-243-193-133.compute-1.amazonaws.com:5432/d50lkg9skmlkhe?user=sfodgkoxvjydhm&password=vJ9DpFVrYq1wIvShtjKY9uE02Z&ssl=true"
         }
     }
 }

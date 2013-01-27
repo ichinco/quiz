@@ -20,9 +20,6 @@ class Pet extends Result {
     int maxInitialCost
     boolean isContained
     boolean allergic
-    String imageUrl;
-    String amazonLink;
-    String amazonImage;
 
     static constraints = {
         affectionate(nullable:true)
@@ -42,9 +39,6 @@ class Pet extends Result {
         maxInitialCost(nullable:true)
         isContained(nullable:true)
         allergic(nullable:true)
-        imageUrl(nullable:true)
-        amazonLink(nullable:true)
-        amazonImage(nullable:true)
     }
 
     @Override
