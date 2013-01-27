@@ -7,7 +7,7 @@ class UrlMappings {
 			}
 		}
 
-		"/"(view:"/quiz/start.gsp")
-		"500"(view:'/error')
+        "/"(view:"/quiz/start.gsp")
+        "500"(view:'/error')
 	}
 }
