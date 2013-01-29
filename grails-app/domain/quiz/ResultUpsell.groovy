@@ -7,4 +7,8 @@ class ResultUpsell {
 
     static constraints = {
     }
+
+    static mapping = {
+        htmlDisplay length: 1000
+    }
 }
