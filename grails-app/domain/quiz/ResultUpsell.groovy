@@ -9,6 +9,6 @@ class ResultUpsell {
     }
 
     static mapping = {
-        htmlDisplay length: 1000
+        htmlDisplay length: 1100
     }
 }
