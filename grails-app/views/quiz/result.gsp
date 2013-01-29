@@ -18,7 +18,7 @@
             <div>Why should you choose a ${result.getResultName()}?</div>
 
             <div>What do I need to take care of a ${result.getResultName()}?</div>
-            <g:each in="${ResultUpsell.findByResult(result)}" var="upsell">
+            <g:each in="${ResultUpsell.findAllByResult(result)}" var="upsell">
                 <div>
                     ${upsell.getHtmlDisplay()}
                 </div>
