@@ -12,14 +12,30 @@
       <meta name="layout" content="quiz" />
   </head>
   <body>
-    <div>So. You're trying to choose a pet. What's on your mind?</div>
-    <g:link controller="quiz" action="displayQuestion" params="['qid':1]">I need a pet that doesn't cost too much money to maintain</g:link><br />
-    <g:link controller="quiz" action="displayQuestion" params="['qid':3]">I need a pet that doesn't need too much attention</g:link><br />
-    <g:link controller="quiz" action="displayQuestion" params="['qid':6]">I need a pet that doesn't need too much space</g:link><br />
-    <g:link controller="quiz" action="displayQuestion" params="['qid':15]">I need a non-allergic pet</g:link><br />
+    <div class="logo">
+      <img id="logo" src="${resource(dir:'images', file:'logo.png')}" />
+    </div>
+
+    <div class="content">
+    So we hear that you want to get a pet...
+    Take the pet quiz to <a class="inline emph">find the perfect animal</a>
+    for you.
+    </div>
+    <div class="content">
+        <li><g:link controller="quiz" action="displayQuestion" params="['qid':1]">I need a pet that doesn't cost too much money to maintain</g:link></li>
+        <li><g:link controller="quiz" action="displayQuestion" params="['qid':3]">I need a pet that doesn't need too much attention</g:link></li>
+        <li><g:link controller="quiz" action="displayQuestion" params="['qid':6]">I need a pet that doesn't need too much space</g:link></li>
+        <li><g:link controller="quiz" action="displayQuestion" params="['qid':15]">I need a non-allergic pet</g:link></li>
+    </div>
     %{--<g:form controller="quiz" action="displayQuestion">--}%
         %{--<g:hiddenField name="id" value="${yesId}" />--}%
         %{--<g:submitButton name="submit" value="need good pet for small children" />--}%
     %{--</g:form>--}%
+
+    <div class="footer">
+      <div class="icon icon-fb"></div>
+      <div class="icon icon-twit"></div>
+      <div class="icon icon-i"></div>
+    </div>
   </body>
 </html>

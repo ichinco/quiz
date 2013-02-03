@@ -10,6 +10,8 @@
 <html>
   <head>
       <title><g:layoutTitle default="PetPicker" /></title>
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
+      <link href="${resource(dir:'css', file:'quiz.css')}" rel='stylesheet' type='text/css' />
       <g:layoutHead />
   </head>
   <body>
