@@ -24,8 +24,8 @@
                         It is ${pet.trainable ? "" : "not" } possible to train them.
                         As a pet, a ${pet.name} ${pet.smelly ? "can be" : "is not usually"} smelly.
                         A ${pet.name} is ${pet.noisy ? "" : "not"} noisy.
-                        ${pet.allergic ? "" : "They a good pet for someone with allergies. "}
-                        ${pet.liveFood ? "" : "A " + pet.name + " must be fed live food. "}
+                        ${pet.allergic ? "" : "They are a good pet for someone with allergies. "}
+                        ${pet.liveFood ? "A " + pet.name + " must be fed live food. " : ""}
                         ${pet.isContained ? "These pets do not require much space. " : ""}
                         ${pet.needsOutdoorSpace ? "They require outdoor space. " : ""}
                         A ${pet.name} usually lives approximately ${pet.lifespan} years.
