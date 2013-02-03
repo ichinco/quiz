@@ -98,3 +98,11 @@ li {
 .footer .icon-i:hover {
     background-position: -128px 0px;
 }
+
+.label {
+    font-size: 25px;
+}
+
+.value {
+    display : inline;
+}
