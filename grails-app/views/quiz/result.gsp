@@ -13,7 +13,7 @@
   </head>
   <body>
     <g:each in="${results}" var="result">
-        <div>
+        <div class="content">
             ${result.getResultName()}
             <div>Why should you choose a ${result.getResultName()}?</div>
 
