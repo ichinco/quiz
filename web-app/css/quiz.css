@@ -98,7 +98,7 @@ li {
     background-position: -128px 0px;
 }
 
-.label {
+.label,.description {
     font-size: 25px;
 }
 

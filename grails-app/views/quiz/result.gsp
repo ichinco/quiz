@@ -19,25 +19,27 @@
             <g:if test="${result instanceof Pet}">
                 <% Pet pet = (Pet) result; %>
                 <div>
-                    <div class="label">is it affectionate? <div class="value">${pet.affectionate ? "yes" : "no"}</div></div>
-                    <div class="label">is it trainable? <div class="value">${pet.trainable ? "yes" : "no"}</div></div>
-                    <div class="label">is it noisy? <div class="value">${pet.noisy ? "yes" : "no"}</div></div>
-                    <div class="label">is it smelly? <div class="value">${pet.smelly ? "yes" : "no"}</div></div>
-                    <div class="label">is it contained in a cage or tank? <div class="value">${pet.isContained ? "yes" : "no"}</div></div>
-                    <div class="label">does it need outdoor space? <div class="value">${pet.needsOutdoorSpace ? "yes" : "no"}</div></div>
-                    <div class="label">does it need live food? <div class="value">${pet.liveFood ? "yes" : "no"}</div></div>
-                    <div class="label">is it a good pet for someone with allergies? <div class="value">${pet.allergic ? "no" : "yes"}</div></div>
-                    <div class="label">how long is it likely to live? <div class="value">${pet.lifespan}</div></div>
-                    <div class="label">how much will it cost per month? <div class="value">${pet.monthlyCost}</div></div>
-                    <div class="label">how much time will it require per week? <div class="value">${pet.weeklyTimeMin}-${pet.weeklyTimeMax}hrs</div></div>
-                    <div class="label">how much is the pet likely to cost? <div class="value">$${pet.minInitialCost}-${pet.maxInitialCost}</div></div>
-                    <div class="label">how much is the pet likely to cost? <div class="value">$${pet.minInitialCost}-${pet.maxInitialCost}</div></div>
-                    <div class="label">how much will pet equipment cost? <div class="value">$${pet.minEquipment}-${pet.maxEquipment}</div></div>
+                    <div class="description">
+                        A ${pet.name} is ${pet.affectionate ? "" : "not"} an affectionate animal.
+                        It is ${pet.trainable ? "" : "not" } possible to train them.
+                        As a pet, a ${pet.name} ${pet.smelly ? "can be" : "is not usually"} smelly.
+                        A ${pet.name} is ${pet.noisy ? "" : "not"} noisy.
+                        ${pet.allergic ? "" : "They a good pet for someone with allergies. "}
+                        ${pet.liveFood ? "" : "A " + pet.name + " must be fed live food. "}
+                        ${pet.isContained ? "These pets do not require much space. " : ""}
+                        ${pet.needsOutdoorSpace ? "They require outdoor space. " : ""}
+                        A ${pet.name} usually lives approximately ${pet.lifespan} years.
+                    </div>
+
+                    <li>monthly cost:  <div class="value">$${pet.monthlyCost}</div></li>
+                    <li>initial cost: <div class="value">$${pet.minInitialCost}-${pet.maxInitialCost}</div></li>
+                    <li>equipment cost: <div class="value">$${pet.minEquipment}-${pet.maxEquipment}</div> </li>
+                    <li>hours of care per week: <div class="value">${pet.weeklyTimeMin}-${pet.weeklyTimeMax}hrs</div> </li>
                 </div>
             </g:if>
             <div>What do I need to take care of a ${result.getResultName()}?</div>
             <g:each in="${ResultUpsell.findAllByResult(result)}" var="upsell">
-                <div>
+                <div class="upsell">
                     ${upsell.getHtmlDisplay()}
                 </div>
             </g:each>
