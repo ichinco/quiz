@@ -15,7 +15,7 @@
     <g:each in="${results}" var="result">
         <div class="content">
             ${result.getResultName()}
-            <div>Why should you choose a ${result.getResultName()}?</div>
+            <div class="result-header">Why should you choose a ${result.getResultName()}?</div>
             <g:if test="${result instanceof Pet}">
                 <% Pet pet = (Pet) result; %>
                 <div>
@@ -31,13 +31,13 @@
                         A ${pet.name} usually lives approximately ${pet.lifespan} years.
                     </div>
 
-                    <li>monthly cost:  <div class="value">$${pet.monthlyCost}</div></li>
-                    <li>initial cost: <div class="value">$${pet.minInitialCost}-${pet.maxInitialCost}</div></li>
-                    <li>equipment cost: <div class="value">$${pet.minEquipment}-${pet.maxEquipment}</div> </li>
-                    <li>hours of care per week: <div class="value">${pet.weeklyTimeMin}-${pet.weeklyTimeMax}hrs</div> </li>
+                    <li class="label">monthly cost:  <div class="value">$${pet.monthlyCost}</div></li>
+                    <li class="label">initial cost: <div class="value">$${pet.minInitialCost}-${pet.maxInitialCost}</div></li>
+                    <li class="label">equipment cost: <div class="value">$${pet.minEquipment}-${pet.maxEquipment}</div> </li>
+                    <li class="label">hours of care per week: <div class="value">${pet.weeklyTimeMin}-${pet.weeklyTimeMax}hrs</div> </li>
                 </div>
             </g:if>
-            <div>What do I need to take care of a ${result.getResultName()}?</div>
+            <div class="result-header">What do I need to take care of a ${result.getResultName()}?</div>
             <g:each in="${ResultUpsell.findAllByResult(result)}" var="upsell">
                 <div class="upsell">
                     ${upsell.getHtmlDisplay()}

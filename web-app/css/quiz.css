@@ -99,7 +99,7 @@ li {
 }
 
 .label,.description {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .value {
@@ -108,4 +108,8 @@ li {
 
 .upsell {
     display: inline;
+}
+
+.result-header {
+    font-size: 30px;
 }
