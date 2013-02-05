@@ -6,6 +6,7 @@
   </head>
   <body>
     <div class="content">${question.text}</div>
+    <div class="content blurb">${question.blurb}</div>
     <div class="content">
         <li><g:link controller="quiz" action="${yesAction}" params="['qid':yesId]">${question.yesText}</g:link></li>
         <li><g:link controller="quiz" action="${noAction}" params="['qid':noId]">${question.noText}</g:link></li>

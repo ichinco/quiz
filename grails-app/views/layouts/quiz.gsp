@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
   <head>
-      <title><g:layoutTitle default="PetPicker" /></title>
+      <title><g:layoutTitle default="Choose the perfect Pet in the Pet Quiz" /></title>
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
       <link href="${resource(dir:'css', file:'quiz.css')}" rel='stylesheet' type='text/css' />
       <g:layoutHead />
