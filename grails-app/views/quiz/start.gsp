@@ -17,7 +17,7 @@
     </div>
 
     <div class="content">
-    So we hear that you want to get a pet...
+    So we hear that you want to get an exotic pet...
     Take the pet quiz to <a class="inline emph">find the perfect animal</a>
     for you.
     </div>
