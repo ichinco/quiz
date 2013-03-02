@@ -33,8 +33,8 @@
     %{--</g:form>--}%
 
     <div class="footer">
-      <div class="icon icon-twit"></div>
-      <div class="icon icon-i"></div>
+      <a href="http://www.twitter.com/petspetspets1"><div class="icon icon-twit"></div></a>
+      <g:link view="quiz/about.gsp"><div class="icon icon-i"></div></g:link>
     </div>
   </body>
 </html>
