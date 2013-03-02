@@ -33,7 +33,6 @@
     %{--</g:form>--}%
 
     <div class="footer">
-      <div class="icon icon-fb"></div>
       <div class="icon icon-twit"></div>
       <div class="icon icon-i"></div>
     </div>

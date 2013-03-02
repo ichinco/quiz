@@ -11,7 +11,8 @@ environments {
     development {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop','update'
-            url = "jdbc:postgresql://localhost:5432/quiz?user=postgres&password=dev"
+//            url = "jdbc:postgresql://localhost:5432/quiz?user=postgres&password=dev"
+            url = "jdbc:postgresql://ec2-54-243-193-133.compute-1.amazonaws.com:5432/d50lkg9skmlkhe?user=sfodgkoxvjydhm&password=vJ9DpFVrYq1wIvShtjKY9uE02Z&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory"
             driverClassName = "org.postgresql.Driver"
         }
     }

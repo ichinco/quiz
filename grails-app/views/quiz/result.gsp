@@ -13,9 +13,16 @@
   </head>
   <body>
     <g:each in="${results}" var="result">
-        <div class="content">
+        <div class="content ${result.getResultName()}">
             ${result.getResultName()}
             <div class="result-header">Why should you choose a ${result.getResultName()}?</div>
+
+            <a href="https://twitter.com/share"
+               class="twitter-share-button" data-lang="en"
+               data-url="http://petspetspets.herokuapp.com"
+               data-via="petspetspets1"
+               data-text="Should I get a ${result.getResultName()}? Take the pet
+                          quiz and find out what pet's right for you!">Tweet</a>
             <g:if test="${result instanceof Pet}">
                 <% Pet pet = (Pet) result; %>
                 <div>
@@ -37,12 +44,14 @@
                     <li class="label">hours of care per week: <div class="value">${pet.weeklyTimeMin}-${pet.weeklyTimeMax}hrs</div> </li>
                 </div>
             </g:if>
-            <div class="result-header">What do I need to take care of a ${result.getResultName()}?</div>
-            <g:each in="${ResultUpsell.findAllByResult(result)}" var="upsell">
-                <div class="upsell">
-                    ${upsell.getHtmlDisplay()}
-                </div>
-            </g:each>
+            <div class="products">
+                <div class="result-header">What do you need to take care of a ${result.getResultName()}?</div>
+                <g:each in="${ResultUpsell.findAllByResult(result)}" var="upsell">
+                    <div class="upsell">
+                        ${upsell.getHtmlDisplay()}
+                    </div>
+                </g:each>
+            </div>
         </div>
     </g:each>
   </body>
