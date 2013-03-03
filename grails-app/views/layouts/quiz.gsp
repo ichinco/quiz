@@ -13,6 +13,7 @@
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css' />
       <link href="${resource(dir:'css', file:'quiz.css')}" rel='stylesheet' type='text/css' />
       <link rel="shortcut icon" href="${resource(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
+      <script src="${resource(dir:'js', file:'jquery.js')}" type="text/javascript"></script>
       <g:layoutHead />
   </head>
   <body>
@@ -42,5 +43,45 @@
             fjs.parentNode.insertBefore(js,fjs);
         }}(document,"script","twitter-wjs");
 
+</script>
+
+<script type="text/javascript">
+// Outbound Link Tracking with Google Analytics
+// Requires jQuery 1.7 or higher (use .live if using a lower version)
+$(function() {
+    $("a").on('click',function(e){
+        var url = $(this).attr("href");
+        // Console logs shows the domain name of the link being clicked and the current window
+        // console.log('e.currentTarget.host: ' + e.currentTarget.host);
+        // console.log('window.location.host: ' + window.location.host);
+        // If the domains names are different, it assumes it is an external link
+        // Be careful with this if you use subdomains
+        if (e.currentTarget.host != window.location.host) {
+//            console.log('external link click');
+            // Outbound link! Fires the Google tracker code.
+            _gat._getTrackerByName()._trackEvent("Outbound Links", e.currentTarget.host, url, 0);
+            // Checks to see if the ctrl or command key is held down
+            // which could indicate the link is being opened in a new tab
+            if (e.metaKey || e.ctrlKey) {
+                // console.log('ctrl or meta key pressed');
+                var newtab = true;
+            }
+            // If it is not a new tab, we need to delay the loading
+            // of the new link for a just a second in order to give the
+            // Google track event time to fully fire
+            if (!newtab) {
+                // console.log('default prevented');
+                e.preventDefault();
+                // console.log('loading link after brief timeout');
+                setTimeout('document.location = "' + url + '"', 100);
+            }
+        }
+        /*
+        else {
+            console.log('internal link click');
+        }
+        */
+    });
+});
 </script>
 </html>
