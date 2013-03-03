@@ -46,6 +46,8 @@
 
                     </div>
 
+                    <div class="result-header">General Facts</div>
+
                     <li class="label">lifespan:  <div class="value">approximately ${pet.lifespan} year(s)</div></li>
                     <li class="label">monthly cost:  <div class="value">$${pet.monthlyCost}</div></li>
                     <li class="label">initial cost: <div class="value">$${pet.minInitialCost}-${pet.maxInitialCost}</div></li>
