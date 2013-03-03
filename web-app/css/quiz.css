@@ -18,13 +18,29 @@ body, html {
 
 }
 
+a {
+    color: #999;
+    text-decoration: none;
+}
+
+div.intro-text
+{
+    font-size: 25px;
+}
+
+div.intro-text p
+{
+    margin: 0px 0px 20px 0px;
+}
+
+
 #logo {
+    margin: 20px 0px 10px 0px;
     width: 250px;
 }
 
 .logo {
     text-align: center;
-    position: fixed;
 }
 
 .content {
@@ -38,9 +54,31 @@ body, html {
     margin-top: 10px;
 }
 
+ul {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 li {
-    font-size:25px;
+    font-size:20px;
     list-style-type:none;
+    display: inline-block;
+    padding: 0px 50px 0px 50px;
+}
+
+li.entry-point div.description
+{
+    position: absolute;
+    visibility: hidden;
+}
+
+li.entry-point:hover div.description
+{
+    visibility: visible;
 }
 
 .inline {

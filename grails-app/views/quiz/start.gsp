@@ -15,17 +15,55 @@
     <div class="logo">
       <img id="logo" src="${resource(dir:'images', file:'logo.png')}" />
     </div>
-
     <div class="content">
-    So we hear that you want to get an exotic pet...
-    Take the pet quiz to <a class="inline emph">find the perfect animal</a>
-    for you.
-    </div>
-    <div class="content">
-        <li><g:link controller="quiz" action="displayQuestion" params="['qid':1]">I need a pet that doesn't cost too much money to maintain</g:link></li>
-        <li><g:link controller="quiz" action="displayQuestion" params="['qid':3]">I need a pet that doesn't need too much attention</g:link></li>
-        <li><g:link controller="quiz" action="displayQuestion" params="['qid':6]">I need a pet that doesn't need too much space</g:link></li>
-        <li><g:link controller="quiz" action="displayQuestion" params="['qid':15]">I need a non-allergic pet</g:link></li>
+        <div class="intro-text">
+            <p>
+            So we hear that you want to get an <span class="inline emph">exotic</span> pet.
+            Take our pet quiz to find the perfect
+            match for you.
+            </p>
+            <p>
+            Before we get started, what is the most important factor?
+            </p>
+        </div>
+        <ul class="entry-points">
+            <li class="entry-point">
+                <g:link controller="quiz" action="displayQuestion" params="['qid':1]">
+                    Cost
+                </g:link>
+                <div class="description">
+                    I am a bit short on cash, so ideally, I would like a pet
+                    that doesn't cost too much to buy or to maintain.
+                </div>
+            </li>
+            <li class="entry-point">
+                <g:link controller="quiz" action="displayQuestion" params="['qid':3]">
+                    Time
+                </g:link>
+                <div class="description">
+                    I have a really busy lifestyle, and I want a pet that
+                    doesn't require too much attention.
+                </div>
+            </li>
+            <li class="entry-point">
+                <g:link controller="quiz" action="displayQuestion" params="['qid':6]">
+                    Space
+                </g:link>
+                <div class="description">
+                    My home is a bit limited in space. I would ideally
+                    want a pet that need a lot of space to roam.
+                </div>
+            </li>
+            <li class="entry-point">
+                <g:link controller="quiz" action="displayQuestion" params="['qid':15]">
+                    Allergies
+                </g:link>
+                <div class="description">
+                    I have strong reactions to some animals. I would like
+                    to look at pets that will definitely not make me allergic.
+                </div>
+            </li>
+        </ul>
     </div>
     %{--<g:form controller="quiz" action="displayQuestion">--}%
         %{--<g:hiddenField name="id" value="${yesId}" />--}%
