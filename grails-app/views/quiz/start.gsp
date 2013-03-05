@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="logo">
-      <img id="logo" src="${resource(dir:'images', file:'logo.png')}" />
+      <img alt="logo" id="logo" src="${resource(dir:'images', file:'logo.png')}" />
     </div>
     <div class="content">
         <div class="intro-text">
@@ -71,8 +71,14 @@
     %{--</g:form>--}%
 
     <div class="footer">
-      <a href="http://www.twitter.com/petspetspets1"><div class="icon icon-twit"></div></a>
-      <g:link view="quiz/about.gsp"><div class="icon icon-i"></div></g:link>
+      <a href="http://www.twitter.com/petspetspets1">
+          <div style="background-image:url('${resource(dir:'images', file:'iconsheet.png')}')"
+               class="icon icon-twit"></div>
+      </a>
+      <g:link view="quiz/about.gsp">
+          <div style="background-image:url('${resource(dir:'images', file:'iconsheet.png')}')"
+               class="icon icon-i"></div>
+      </g:link>
     </div>
   </body>
 </html>

@@ -20,8 +20,7 @@
                class="twitter-share-button" data-lang="en"
                data-url="http://petspetspets.herokuapp.com"
                data-via="petspetspets1"
-               data-text="Should I get a ${result.getResultName()}? Take the pet
-                          quiz and find out what pet's right for you!">Tweet</a>
+               data-text="Should I get a ${result.getResultName()}? Take the pet quiz and find out what pet's right for you!">Tweet</a>
             <g:if test="${result instanceof Pet}">
                 <% Pet pet = (Pet) result; %>
                 <div>
