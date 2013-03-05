@@ -90,6 +90,7 @@ li.entry-point div.description
 {
     position: absolute;
     visibility: hidden;
+    display: none;
 }
 
 li.entry-point:hover div.description
