@@ -56,11 +56,17 @@
             </g:if>
             <div class="products">
                 <div class="result-header">What do you need to take care of a ${result.getResultName()}?</div>
-                <g:each in="${ResultUpsell.findAllByResult(result)}" var="upsell">
-                    <div class="upsell">
-                        ${upsell.getHtmlDisplay()}
-                    </div>
-                </g:each>
+                <div class="description">
+                    Here are some products that you may find essential in taking care
+                    of your ${result.getResultName()}.
+                </div>
+                <div class="pet-products">
+                    <g:each in="${ResultUpsell.findAllByResult(result)}" var="upsell">
+                        <div class="upsell">
+                            ${upsell.getHtmlDisplay()}
+                        </div>
+                    </g:each>
+                </div>
             </div>
         </div>
     </g:each>
