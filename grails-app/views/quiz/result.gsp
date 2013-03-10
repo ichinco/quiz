@@ -63,7 +63,7 @@
                 <div class="pet-products">
                     <g:each in="${ResultUpsell.findAllByResult(result)}" var="upsell">
                         <div class="upsell">
-                            ${upsell.getHtmlDisplay()}
+                            <a href="http://www.amazon.com/gp/product/${upsell.getHtmlDisplay()}/ref=as_li_ss_il?ie=UTF8&camp=1789&creative=390957&creativeASIN=${upsell.getHtmlDisplay()}&linkCode=as2&tag=trythaton-20"><img border="0" src="http://ws.assoc-amazon.com/widgets/q?_encoding=UTF8&ASIN=${upsell.getHtmlDisplay()}&Format=_SL160_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=trythaton-20" ></a><img src="http://www.assoc-amazon.com/e/ir?t=trythaton-20&l=as2&o=1&a=${upsell.getHtmlDisplay()}" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
                         </div>
                     </g:each>
                 </div>
