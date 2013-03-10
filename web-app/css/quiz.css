@@ -181,6 +181,7 @@ li.entry-point:hover div.description
     margin-right: 3px;
     width: 160px;
     height: 160px;
+    vertical-align: middle;
     text-align: center;
     background-color: #fff;
     overflow: hidden;

@@ -21,7 +21,8 @@ insert into result_set (id, version) VALUES
 (17,0), -- no space, >$50, >10years, silent, dead food
 (18,0), -- allergic, >$100
 (19,0), -- allergic, <$100, >5yr
-(20,0); -- allergic, <$100, <5yr
+(20,0), -- allergic, <$100, <5yr
+(21,0); -- all pets
 
 insert into result_set_result (id, version, result_set_id, result_id) VALUES
 (1,0,1,18), -- beta
@@ -63,6 +64,27 @@ insert into result_set_result (id, version, result_set_id, result_id) VALUES
 (37,0,20,4), -- fish
 (38,0,20,18), -- betafish
 (39,0,20,19), -- goldfish
-(40,0,20,21) -- hermit
-
-
+(40,0,20,21), -- hermit
+(41,0,21,1),
+(42,0,21,2),
+(43,0,21,3),
+(44,0,21,4),
+(45,0,21,5),
+(46,0,21,6),
+(47,0,21,7),
+(48,0,21,8),
+(49,0,21,9),
+(50,0,21,10),
+(51,0,21,11),
+(52,0,21,12),
+(53,0,21,13),
+(54,0,21,14),
+(55,0,21,15),
+(56,0,21,16),
+(57,0,21,17),
+(58,0,21,18),
+(59,0,21,19),
+(60,0,21,20),
+(61,0,21,21),
+(62,0,21,22),
+(63,0,21,23);

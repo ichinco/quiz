@@ -70,5 +70,7 @@
             </div>
         </div>
     </g:each>
+
+    <div class="content">Didn't find what you were looking for? <g:link controller="quiz" action="displayResult" params="['qid' : 21]">See all >></g:link></div>
   </body>
 </html>
