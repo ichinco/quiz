@@ -18,7 +18,7 @@
     <div class="content">
         <div class="intro-text">
             <p>
-            So we hear that you want to get an <span class="inline emph">exotic</span> pet.
+            So we hear that you want to get a pet.
             Take our pet quiz to find the perfect
             match for you.
             </p>
